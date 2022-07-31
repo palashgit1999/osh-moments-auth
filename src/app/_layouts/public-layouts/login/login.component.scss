@@ -1,0 +1,136 @@
+@import "../../../../assets/mixin";
+
+$blackColor: #000;
+$disabledColor: #bdbdbd;
+
+.log-container {
+  font-family: Garamond !important;
+
+  header {
+    margin-bottom: 1.5rem;
+    p {
+      @include fontStyle($blackColor, 1.25rem, 600);
+    }
+  }
+  .log-email {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+    input {
+      width: calc(100% - 2rem);
+      outline: none;
+      background-color: #e2e2e2;
+      @include fontStyle($blackColor, 1.05rem, 500);
+      border-radius: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      border: solid 0.1rem $disabledColor;
+
+      &::placeholder {
+        font-size: 0.9rem !important;
+        // @include fontStyle(red, 1.25rem, 600);
+        &::after {
+          content: "dfef" !important;
+          // position: absolute;
+          // right: 0;
+          @include fontStyle(red, 1.25rem, 600);
+        }
+      }
+    }
+    .err_text {
+      padding: 0.5rem 0 0 0.5rem;
+      p {
+        @include fontStyle(red, 1.25rem, 500);
+      }
+    }
+  }
+}
+
+.remember_me_forgot {
+  @include displayFlex(space-between, center);
+  text-transform: lowercase;
+  @include fontStyle($blackColor, 1.25rem, 500);
+  .remember_section {
+    @include displayFlex(flex-start, center);
+  }
+  label {
+    padding-left: 0.5rem;
+    cursor: pointer;
+  }
+  p {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.submit_button_outer {
+  margin-top: 2rem;
+  button {
+    background: #ac0c00;
+    @include fontStyle(#fff, 1.1rem, 500);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    outline: none;
+    border-color: transparent;
+    text-transform: lowercase;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #fff;
+      color: #ac0c00;
+      border: solid 0.1rem #ac0c00;
+    }
+  }
+}
+
+.or_section {
+  // margin: 2rem 0;
+  padding: 2rem 0;
+  position: relative;
+  p {
+    @include fontStyle(black, 1.25rem, 500);
+    padding: 0 1rem;
+    background-color: white;
+    text-align: center;
+    // z-index: 7;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  hr {
+    background-color: $disabledColor;
+    // border: solid 0.1rem $disabledColor;
+    margin: 0;
+    width: 100%;
+    margin: 0.25rem 0 0 0;
+    // z-index: 1;
+  }
+}
+
+.social_buttons_outer {
+  @include displayFlex(space-between, center);
+  .social_buttons {
+    @include displayFlex(center, center);
+    width: calc(50% - 4rem);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    img {
+      width: 2rem;
+      
+    }
+    p {
+      padding-left: 1rem;
+      white-space: nowrap;
+    }
+  }
+  .fb_button {
+    background-color: #3a5897;
+    @include fontStyle(#fff, 1.2rem, 600);
+  }
+  .google_button {
+    border: solid 0.1rem #2b2c2d;
+    @include fontStyle(#2b2c2d, 1.2rem, 600);
+  }
+}

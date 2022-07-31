@@ -1,0 +1,114 @@
+<section class="log-container">
+    <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
+      <!-- <div class="log-part">
+        <h3>log in</h3>
+      </div> -->
+      <header><p class="m-0">create an account</p></header>
+      <div class="log-email">
+        <input
+          formControlName="full_name"
+          type="password"
+          placeholder="password"
+        />
+        <div
+          *ngIf="
+            signUpForm.controls['full_name']?.errors?.required &&
+            signUpForm.get('full_name')?.touched
+          "
+        >
+          <small class="err_text">Username or email is required</small>
+        </div>
+      </div>
+      <div class="log-email">
+        <input
+          formControlName="mailto:email"
+          type="email"
+          placeholder="email address"
+        />
+        <div
+          *ngIf="
+            signUpForm.controls['mailto:email']?.errors?.required &&
+            signUpForm.get('mailto:email')?.touched
+          "
+        >
+          <small class="err_text">Username or email is required</small>
+        </div>
+      </div>
+      <div class="log-email">
+        <input
+          formControlName="password"
+          type="password"
+          placeholder="password"
+        />
+        <div
+          *ngIf="
+            signUpForm.controls['password']?.errors?.required &&
+            signUpForm.get('password')?.touched
+          "
+        >
+          <small class="err_text">Username or email is required</small>
+        </div>
+      </div>
+      <div class="log-email">
+        <input
+          formControlName="confirm_password"
+          type="password"
+          placeholder="confirm password"
+        />
+        <div
+          *ngIf="
+            signUpForm.controls['confirm_password']?.errors?.required &&
+            signUpForm.get('confirm_password')?.touched
+          "
+        >
+          <small class="err_text">Username or email is required</small>
+        </div>
+      </div>
+      <div class="log-email">
+        <input
+          formControlName="interests"
+          type="text"
+          placeholder="interests"
+        />
+        <div
+          *ngIf="
+            signUpForm.controls['interests']?.errors?.required &&
+            signUpForm.get('interests')?.touched
+          "
+        >
+          <small class="err_text">Username or email is required</small>
+        </div>
+      </div>
+      <div class="log-email">
+        <input
+          formControlName="preferred_size"
+          type="number"
+          placeholder="preferred size"
+        />
+        <div
+          *ngIf="
+            signUpForm.controls['preferred_size']?.errors?.required &&
+            signUpForm.get('preferred_size')?.touched
+          "
+        >
+          <small class="err_text">Username or email is required</small>
+        </div>
+      </div>
+      <div class="remember_me_forgot">
+        <div class="remember_section">
+          <input type="checkbox" name="remember" id="remember" />
+          <label for="remember">newsletter</label>
+        </div>
+      </div>
+      <div class="remember_me_forgot">
+        <div class="remember_section">
+          <input type="checkbox" name="remember" id="remember" />
+          <label for="remember">agree terms and conditions</label>
+        </div>
+      </div>
+      <div class="submit_button_outer">
+        <button type="submit">create account</button>
+      </div>
+    </form>
+  </section>
+  

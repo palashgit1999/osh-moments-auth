@@ -1,0 +1,88 @@
+@import "../../../../assets/mixin";
+
+$blackColor: #000;
+$disabledColor: #bdbdbd;
+
+.log-container {
+  font-family: Garamond !important;
+
+  header {
+    margin-bottom: 1.5rem;
+    p {
+      @include fontStyle($blackColor, 1.25rem, 600);
+    }
+  }
+  .log-email {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+    input {
+      width: calc(100% - 2rem);
+      outline: none;
+      background-color: #e2e2e2;
+      @include fontStyle($blackColor, 1.05rem, 500);
+      border-radius: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      border: solid 0.1rem $disabledColor;
+
+      &::placeholder {
+        font-size: 0.9rem !important;
+        // @include fontStyle(red, 1.25rem, 600);
+        &::after {
+          content: "dfef" !important;
+          // position: absolute;
+          // right: 0;
+          @include fontStyle(red, 1.25rem, 600);
+        }
+      }
+    }
+    .err_text {
+      padding: 0.5rem 0 0 0.5rem;
+      p {
+        @include fontStyle(red, 1.25rem, 500);
+      }
+    }
+  }
+}
+
+.remember_me_forgot {
+  // @include displayFlex(space-between, center);
+  text-transform: lowercase;
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  @include fontStyle($blackColor, 1.25rem, 500);
+  .remember_section {
+    @include displayFlex(flex-start, center);
+  }
+  label {
+    padding-left: 0.5rem;
+    cursor: pointer;
+  }
+  // p {
+  //   text-decoration: underline;
+  //   cursor: pointer;
+  // }
+}
+
+.submit_button_outer {
+  margin-top: 2rem;
+  button {
+    background: #ac0c00;
+    @include fontStyle(#fff, 1.1rem, 500);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    outline: none;
+    border-color: transparent;
+    text-transform: lowercase;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #fff;
+      color: #ac0c00;
+      border: solid 0.1rem #ac0c00;
+    }
+  }
+}

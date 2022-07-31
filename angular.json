@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "498169e2-0be9-4c6e-8c11-d03d7b98d3d9"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -99,7 +102,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "../node_modules/font-awesome/css/font-awesome.css" 
             ],
             "scripts": []
           }

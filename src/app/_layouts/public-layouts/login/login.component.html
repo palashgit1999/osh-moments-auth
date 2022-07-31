@@ -1,0 +1,64 @@
+<section class="log-container">
+  <form [formGroup]="signInform" (ngSubmit)="onLogIn()">
+    <!-- <div class="log-part">
+      <h3>log in</h3>
+    </div> -->
+    <header><p class="m-0">login</p></header>
+    <div class="log-email">
+      <input
+        formControlName="mailto:email"
+        type="email"
+        placeholder="email address"
+      />
+      <div
+        *ngIf="
+          signInform.controls['mailto:email']?.errors?.required &&
+          signInform.get('mailto:email')?.touched
+        "
+      >
+        <small class="err_text">Username or email is required</small>
+      </div>
+    </div>
+    <div class="log-email">
+      <input
+        formControlName="password"
+        type="password"
+        placeholder="password"
+      />
+      <div
+        *ngIf="
+          signInform.controls['password']?.errors?.required &&
+          signInform.get('password')?.touched
+        "
+      >
+        <small class="err_text">Username or email is required</small>
+      </div>
+    </div>
+    <div class="remember_me_forgot">
+      <div class="remember_section">
+        <input type="checkbox" name="remember" id="remember" />
+        <label for="remember">Remember me</label>
+      </div>
+      <div class="forgot_password">
+        <p class="m-0">Forggot password</p>
+      </div>
+    </div>
+    <div class="submit_button_outer">
+      <button type="submit" [disabled]="loginLoader">Login</button>
+    </div>
+    <div class="or_section">
+        <p class="m-0">or</p>
+        <hr>
+    </div>
+    <div class="social_buttons_outer">
+        <div class="social_buttons fb_button">
+            <img src="../../../assets/Images/fb3.png" alt="">
+            <p class="m-0">sign in with facebook</p>
+        </div>
+        <div class="social_buttons google_button">
+            <img src="../../../assets/Images/ggle1.png" alt="">
+            <p class="m-0">sign in with google</p>
+        </div>
+    </div>
+  </form>
+</section>

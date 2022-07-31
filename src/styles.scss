@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+$fa-font-path: "../node_modules/font-awesome/fonts";
+@import "../node_modules/font-awesome/css/font-awesome.css";
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.m-0{
+    margin: 0;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.dflex{
+    display: flex;
+}
+
+.content-between{
+    justify-content: space-between;
+}
+
+// html {
+//     font-size: 67%;
+//     @media (max-width: 1199px) {
+//         font-size: 60%;
+//     }
+//     @media (max-width: 991px) {
+//         font-size: 57.5%;
+//     }
+//     @media (max-width: 767px) {
+//         font-size: 55%;
+//     }
+//     @media (max-width: 575px) {
+//         font-size: 52.5%;
+//     }
+// }

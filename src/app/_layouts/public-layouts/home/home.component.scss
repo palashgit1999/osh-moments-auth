@@ -1,0 +1,28 @@
+@import "../../../../assets/mixin";
+
+$blackColor: #000;
+$disabledColor: #bdbdbd;
+
+.main_outer {
+  padding: 3rem 2.25rem 6rem 2.25rem;
+  //   font: normal normal bold 44px/50px Garamond;
+  font-family: Garamond;
+  header {
+    margin-bottom: 1.5rem;
+    p {
+      @include fontStyle($blackColor, 1.45rem, 600);
+    }
+  }
+}
+
+.login_sign_up_outer {
+  @include displayFlex(space-between, stretch);
+  .card_outer {
+    box-shadow: 0 0 0.25rem $disabledColor;
+    // border: red solid 1px;
+    width: calc(50% - 1.5rem);
+    .card_inner {
+      padding: 2rem 1.35rem;
+    }
+  }
+}

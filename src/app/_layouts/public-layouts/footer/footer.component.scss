@@ -1,0 +1,90 @@
+$disabledColor: #bdbdbd;
+$blackColor: #000;
+@import "../../../../assets/mixin";
+footer {
+  background-color: $blackColor;
+  box-shadow: 0 0.2rem 0.5rem $disabledColor;
+  // position: relative;
+  color: aliceblue;
+  font-family: Garamond;
+
+}
+.footer-upper {
+  @include displayFlex(space-between, center);
+  padding: 4rem 6rem 5rem 6rem;
+
+  // position: relative;
+  // color: aliceblue;
+  // padding: 2rem 0.3rem 0 0.3rem;
+  .inner-col {
+    // border: 1px solid white;
+    height: 15rem;
+    .head {
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
+      font-weight: bold;
+    }
+    .news_letter_outer {
+      width: 8rem;
+    }
+    .data {
+      margin-bottom: 0.89rem;
+      button {
+        background-color: #000;
+        border: #bdbdbd solid 1px;
+        color: antiquewhite;
+        height: 2.2rem;
+        width: 100%;
+      }
+      input {
+        height: 2.2rem;
+        width: calc(100% - 0.5rem);
+        text-align: center;
+        outline: none;
+      }
+    }
+    .img-p {
+      @include displayFlex(flex-start, center);
+      // div {
+      //     width: 40%;
+      //     white-space: nowrap;
+      // }
+      img {
+        width: 1.75rem;
+        margin-right: 1rem;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    .social-footer {
+      @include displayFlex(flex-start, center);
+      .social_inner {
+        // width: 2.2rem;
+        padding: 0.3rem 0.5rem;
+        border: white 0.1rem solid;
+        border-radius: 0.3rem;
+        @include displayFlex(center, center);
+        &:not(:last-child) {
+          margin-right: 1.75rem;
+        }
+      }
+    }
+  }
+}
+.footer-lower {
+  @include displayFlex(space-between, center);
+  padding: 1rem 6rem;
+
+  .copy-right {
+  }
+  .payment {
+    @include displayFlex(flex-end, center);
+    img {
+      width: 1.75rem;
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+}

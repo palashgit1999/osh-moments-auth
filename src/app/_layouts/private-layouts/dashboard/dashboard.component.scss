@@ -1,0 +1,19 @@
+@import "../../../../assets/mixin";
+.dashboard-container{
+    @include displayFlex(space-around, center);
+    height: 12rem;
+
+    .content{
+      width: 300px;
+    }
+  .lower{
+    button {
+        background-color: red;
+        color: aliceblue;
+        width: 7rem;
+        border: none;
+        height: 2rem;
+        cursor: pointer;
+    }
+}  
+}
